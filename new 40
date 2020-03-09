@@ -1,0 +1,85 @@
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        html.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git add .
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   html.txt
+
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git commit -m"first commit"
+[master (root-commit) 903024d] first commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 html.txt
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git log
+commit 903024d0b80e907ca4461cf3d6b7aad11c16a80f (HEAD -> master)
+Author: 0979632069 <phamhai.bvh@gmail.com>
+Date:   Mon Mar 9 15:31:51 2020 +0700
+
+    first commit
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git push origin master
+fatal: TaskCanceledException encountered.
+   A task was canceled.
+error: unable to read askpass response from 'D:/Program/Git/mingw64/libexec/git-core/git-gui--askpass'
+Username for 'https://github.com': 0979632069
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 217 bytes | 217.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/0979632069/demo.git
+ * [new branch]      master -> master
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 628 bytes | 3.00 KiB/s, done.
+From https://github.com/0979632069/demo
+ * branch            master     -> FETCH_HEAD
+   903024d..e12c874  master     -> origin/master
+Updating 903024d..e12c874
+Fast-forward
+ html.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$ ^C
+
+Keeng@DESKTOP-2S9P80E MINGW64 ~/Desktop/demo (master)
+$
